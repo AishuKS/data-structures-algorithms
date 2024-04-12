@@ -22,7 +22,7 @@ Trees
 Graphs
 Sorting algorithms (e.g., Bubble Sort, Merge Sort, Quick Sort)
 Searching algorithms (e.g., Binary Search, Depth-First Search, Breadth-First Search)
-Each implementation is provided in multiple programming languages, including Python, Java, and C++. The code is well-commented and structured to facilitate understanding and learning.
+Each implementation is provided in python programming languages. The code is well-commented and structured to facilitate understanding and learning.
 
 ## Usage
 Feel free to explore the code in this repository to learn about different data structures and algorithms. You can clone the repository to your local machine using the following command:
