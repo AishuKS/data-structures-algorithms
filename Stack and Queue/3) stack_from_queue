@@ -27,10 +27,10 @@ class Stack:
             print("Stack Empty")
             return None
         
-        while len(self.q1)>1:
-            self.q2.append(self.q1.popleft())
+        # while len(self.q1)>1:
+        #     self.q2.append(self.q1.popleft())
         
-        item = self.q1[0]
+        item = self.q1[-1]
         print(item)
         return item
     
@@ -46,6 +46,8 @@ stack.push(20)
 stack.push(30)
 stack.push(40)
 stack.push(50)
+stack.pop()
+stack.top()
 stack.pop()
 stack.top()
 stack.empty()
