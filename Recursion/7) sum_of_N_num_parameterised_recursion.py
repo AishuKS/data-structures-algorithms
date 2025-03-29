@@ -5,4 +5,4 @@ def countNum(num,N, total=0):
     else:
         print(total)
     
-countNum(1,3)
+countNum(1,10)
