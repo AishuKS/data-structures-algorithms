@@ -7,21 +7,24 @@ Output: [[1, 2], [2], [1], [1, 2, 2], [2, 2], []]
 
 '''
 
-def subDup(arr):
-    ans = set()
-    def subset(arr, index, current):
-        if len(arr) == index:
-            ans.add(tuple(current))
-            return
-        
-        current.append(arr[index])
-        subset(arr, index+1, current)
-        current.pop()
-        subset(arr, index+1, current)
-    
-    subset(arr, 0, [])
-    arr.sort()
-    return [list(t) for t in ans]
 
-arr = [1,2,2]
-print(subDup(arr))
+def subsetsWithDup(arr):
+    ans = []
+    ds = []
+
+    def subsequence(index):
+        ans.append(ds[:])
+
+        for i in range(index, len(arr)):
+            if i!=index and arr[i] == arr[i-1]:
+                continue
+            ds.append(arr[i])
+            subsequence(i+1)
+            ds.pop()
+
+    arr.sort()  # Important to group duplicates
+    subsequence(0)
+    return ans  # Convert back to list
+
+arr =[1,2,2]
+print(subsetsWithDup(arr))
