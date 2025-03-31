@@ -11,26 +11,26 @@ Explanation: There exist two distinct solutions to the 4-queens puzzle as shown 
 def swap(row, col, board, n):
     duprow = row
     dupcol = col
-    while duprow>=0 and dupcol>=0:
-        if board[duprow][dupcol] == 'Q':
+    while row>=0 and col>=0:
+        if board[row][col] == 'Q':
             return False
-        duprow -= 1
-        dupcol -= 1
+        row -= 1
+        col -= 1
     
-    duprow = row
-    dupcol = col
-    while dupcol>=0:
-        if board[duprow][dupcol] == 'Q':
+    row = duprow
+    col = dupcol
+    while col>=0:
+        if board[row][col] == 'Q':
             return False
-        dupcol-=1
+        col-=1
     
-    duprow = row
-    dupcol = col
-    while duprow<n and dupcol>=0:
-        if board[duprow][dupcol] == 'Q':
+    row = duprow
+    col = dupcol
+    while row<n and col>=0:
+        if board[row][col] == 'Q':
             return False
-        duprow+=1
-        dupcol-=1
+        row+=1
+        col-=1
     
     return True
 
