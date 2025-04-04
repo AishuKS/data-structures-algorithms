@@ -13,14 +13,14 @@ root.right.left = TreeNode(6)
 root.right.right = TreeNode(7)
 
 #preorder traversal
-def preorder(root):
+def inorder(root):
     if root is None:
         return
     
-    preorder(root.left)      
-    preorder(root.right)     
-    answer.append(root.data)
-
+    inorder(root.left) 
+    answer.append(root.data)     
+    inorder(root.right)     
+    
 answer = []
-preorder(root)
+inorder(root)
 print(answer)
