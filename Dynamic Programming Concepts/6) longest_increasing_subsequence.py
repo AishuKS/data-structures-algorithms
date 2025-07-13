@@ -17,13 +17,15 @@ Output: 1
 from cmath import inf
 
 nums = [10,9,2,5,3,7,101,18]
+nums = [4, 6, 1, 2, 3, 8]
 n = len(nums)
 dp = [1] * n
 i = 1
 j = 0
-maxValue = float(-inf)
+
 for i in range(n):
     for j in range(i):
         if nums[i]>nums[j]:
             dp[i] = max(dp[i], dp[j]+1)
-print(maxValue)
+            
+print(max(dp))
