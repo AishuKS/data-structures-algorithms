@@ -24,6 +24,7 @@ def cutRod(price):
     for i in range(1,n+1):
         for j in range(i):
             dp[i] = max(dp[i], dp[i-j-1]+price[j])
+
     return dp[n]
 
 price = [2,5,7,8]
