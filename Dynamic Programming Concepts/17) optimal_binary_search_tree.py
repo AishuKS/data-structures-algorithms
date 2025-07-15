@@ -44,7 +44,7 @@ keys = [10, 12, 16, 21]
 freq = [4, 2, 6, 3]
 
 n = len(keys)
-dp = [[0] * n for _ in range(n)]
+dp = [[0] * n for i in range(n)]
 sum_freq = [0] * (n+1)
 
 # Precompute prefix sum of frequencies
@@ -70,9 +70,6 @@ for length in range(2, n+1):
             cost_left = dp[i][r - 1] if r > i else 0
             cost_right = dp[r + 1][j] if r < j else 0
             total = cost_left + cost_right + get_sum(i, j)
-            print("i=",i," j=",j)
-            print("cost_left=", cost_left," cost_right=",cost_right, "total:", total)
             dp[i][j] = min(dp[i][j], total)
-            print()
             
 print(dp[0][n - 1])
